@@ -1,9 +1,10 @@
 import anthropic
 import json
+import ast
+import operator
 
-client = anthropic.Anthropic() # read ANTHROPIC_API_KEY from env
+client = anthropic.Anthropic() 
 
-# Step 1: Define tools as JSON Schema
 tools = [
     {  
         "name": "get_weather",
@@ -18,27 +19,66 @@ tools = [
             },
             "required": ["city"]
         }   
+    },
+    {
+        "name": "search_database",
+        "description": "Search a market data database. Returns matching records.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "Search query, e.g. 'Bitcoin price'"
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Maximum number of results to return"
+                }
+            },
+            "required": ["query"]
+        }
+    },
+    {
+        "name": "calculate",
+        "description": "Evaluate a mathematical expression. Supports +, -, *, /.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "expression": {
+                    "type": "string",
+                    "description": "Math expression to evaluate, e.g. '12 * 9/5 + 32'"
+                }
+            },
+            "required": ["expression"]
+        }
     }
 ]
 
-# Step 2: Send request — Claude decides whether to use a tool
-response = client.messages.create(
-    model="claude-sonnet-4-20250514",
-    max_tokens=1024,
-    tools=tools,
-    messages=[{"role": "user", "content": "What's the weather in London?"}] 
-)
+def safe_calculate(expression: str) -> float:
+    """Safely evaluate basic math expressions."""
+    allowed_operators = {
+        ast.Add: operator.add,
+        ast.Sub: operator.sub,
+        ast.Mult: operator.mul,
+        ast.Div: operator.truediv,
+    }
+    
+    def _eval(node):
+        if isinstance(node, ast.Expression):
+            return _eval(node.body)
+        elif isinstance(node, ast.Constant):
+            return node.value
+        elif isinstance(node, ast.BinOp):
+            left = _eval(node.left)
+            right = _eval(node.right)
+            return allowed_operators[type(node.op)](left, right)
+        else:
+            raise ValueError(f"Unsupported operation: {type(node)}")
+    
+    tree = ast.parse(expression, mode='eval')
+    return _eval(tree)
+    
 
-# Step 3: Check what Claude returned
-print(response.stop_reason)  # "tool_use" — Claude wants to call a tool
-print(response.content)
-
-# [
-#   TextBlock(type="text", text="I'll check the weather in London for you."),
-#   ToolUseBlock(type="tool_use", id="toolu_abc123", name="get_weather", input={"city": "London"})
-# ]
-
-# Step 4: Your code executes the tool
 def execute_tool(name: str, input_data: dict) -> str:
     """This is my code — Claude doesn't touch it."""
     if name == "get_weather":
@@ -49,37 +89,28 @@ def execute_tool(name: str, input_data: dict) -> str:
             "conditions": "overcast",
             "humidity": 78
         })
+    elif name == "search_database":
+        return json.dumps({
+            "query": input_data["query"],
+            "results": [
+                {"asset": "BTC", "price": 42000, "date": "2026-03-13"},
+                {"asset": "BTC", "price": 43500, "date": "2026-03-12"},
+                {"asset": "BTC", "price": 41800, "date": "2026-03-11"}
+            ]
+        })
+    elif name == "calculate":
+        try:
+            result = safe_calculate(input_data["expression"])
+            return json.dumps({
+                "expression": input_data["expression"],
+                "result": result
+            })
+        except Exception as e:
+            return json.dumps({"error": f"Failed to calculate: {str(e)}"})
     else:
         return json.dumps({"error": f"Unknown tool: {name}"})
 
-# Step 5: Find the tool_use block, execute it, send the result back
-tool_use_block = next(b for b in response.content if b.type == "tool_use")
 
-tool_result = execute_tool(tool_use_block.name, tool_use_block.input)
-
-# Step 6: Send the result back — note the message structure
-followup = client.messages.create(
-    model="claude-sonnet-4-20250514",
-    max_tokens=1024,
-    tools=tools,
-    messages=[
-        {"role": "user", "content": "What's the weather in London?"},
-        {"role": "assistant", "content": response.content}, # Claude's previous response INCLUDING the tool_use block
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "tool_result",
-                    "tool_use_id": tool_use_block.id, # must match the tool_use id
-                    "content": tool_result
-                }
-            ]
-        }
-    ]
-)
-
-print(followup.content[0].text)
-# "The weather in London is currently 12°C and overcast, with 78% humidity."
 
 
 def run_agent(user_message: str, tools: list, tool_executor: callable, max_steps: int = 10):
@@ -110,7 +141,7 @@ def run_agent(user_message: str, tools: list, tool_executor: callable, max_steps
         tool_results = []
         for block in response.content:
             if block.type == "tool_use":
-                print(f" Step {step + 1}: Calling {block.name}({json.dumps(block.input)}")
+                print(f" Step {step + 1}: Calling {block.name}({json.dumps(block.input)})")
                 result = tool_executor(block.name, block.input)
                 tool_results.append({
                     "type": "tool_result",
@@ -123,3 +154,10 @@ def run_agent(user_message: str, tools: list, tool_executor: callable, max_steps
     
     return "Max steps reached — agent did not complete."
 
+if __name__ == "__main__":
+    while True:
+        user_input = input("\nYou: ")
+        if user_input.lower() == "quit":
+            break
+        result = run_agent(user_input, tools, execute_tool)
+        print(f"\nClaude: {result}")
