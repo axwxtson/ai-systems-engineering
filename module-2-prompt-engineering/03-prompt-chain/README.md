@@ -49,4 +49,4 @@ python3 main.py
 
 ## Connection to AW Analysis
 
-The chain architecture maps directly to the AW Analysis pipeline: Stage 1 mirrors tool-result processing, Stage 2 mirrors the core analysis agent, Stage 3 mirrors report generation. At production scale with multiple data sources (price feeds, news APIs, historical data), the chain's decomposition and validation gates become necessary even though they weren't advantageous at this test scale.
+The chain architecture maps directly to the AW Analysis pipeline: Stage 1 mirrors tool-result processing, Stage 2 mirrors the core analysis agent, Stage 3 mirrors report generation. At production scale with multiple data sources (price feeds, news APIs, historical data), the chain's decomposition and validation gates become necessary even though they weren't advantageous at this test scale.cd 
