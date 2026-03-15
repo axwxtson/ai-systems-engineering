@@ -1,0 +1,398 @@
+[
+  {
+    "num_examples": 0,
+    "accuracy": 1.0,
+    "json_rate": 1.0,
+    "correct": 10,
+    "total": 10,
+    "results": [
+      {
+        "headline": "Amazon Web Services revenue surges 35% year-over-year, exceeding all forecasts",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.95,
+        "reasoning": "The combination of strong revenue growth (35% YoY) and beating forecasts indicates robust business performance and positive momentum.",
+        "valid_json": true
+      },
+      {
+        "headline": "Cryptocurrency exchange FTX files for bankruptcy amid liquidity crisis",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.9,
+        "reasoning": "A major cryptocurrency exchange filing for bankruptcy due to liquidity issues signals severe financial distress and negative market conditions.",
+        "valid_json": true
+      },
+      {
+        "headline": "S&P 500 closes flat as investors digest mixed economic data",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "The headline indicates no significant market movement with mixed economic signals, suggesting investor uncertainty rather than clear directional bias.",
+        "valid_json": true
+      },
+      {
+        "headline": "Nvidia announces new AI chip but faces potential export restrictions to China",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The positive news of a new AI chip announcement is offset by concerns about potential export restrictions to a major market, creating mixed sentiment signals.",
+        "valid_json": true
+      },
+      {
+        "headline": "Bank of England raises rates for the 14th consecutive time, says further hikes unlikely",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The rate hike is hawkish but the signal that further hikes are unlikely provides a dovish counterbalance, creating mixed implications for markets.",
+        "valid_json": true
+      },
+      {
+        "headline": "Consumer confidence falls to lowest level since 2021 as inflation concerns persist",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "Declining consumer confidence to multi-year lows combined with persistent inflation concerns signals economic weakness that typically leads to reduced spending and market pessimism.",
+        "valid_json": true
+      },
+      {
+        "headline": "Unemployment claims drop to 52-week low, labour market remains tight",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "Dropping unemployment claims to a 52-week low and a tight labor market indicate strong economic conditions and reduced joblessness, which are positive economic indicators.",
+        "valid_json": true
+      },
+      {
+        "headline": "Gold surges 4% as global recession fears mount and investors flee to safe havens",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.9,
+        "reasoning": "The 4% surge in gold price driven by safe-haven demand indicates strong bullish momentum for the precious metal during times of economic uncertainty.",
+        "valid_json": true
+      },
+      {
+        "headline": "Government announces massive stimulus package amid deepening economic crisis",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The positive stimulus announcement is offset by the concerning reference to a deepening economic crisis, creating mixed market signals.",
+        "valid_json": true
+      },
+      {
+        "headline": "Tech CEO steps down to pursue personal interests, board names interim replacement",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.7,
+        "reasoning": "CEO departures typically create uncertainty and leadership instability concerns for investors, even when framed as voluntary for personal reasons.",
+        "valid_json": true
+      }
+    ]
+  },
+  {
+    "num_examples": 1,
+    "accuracy": 1.0,
+    "json_rate": 1.0,
+    "correct": 10,
+    "total": 10,
+    "results": [
+      {
+        "headline": "Amazon Web Services revenue surges 35% year-over-year, exceeding all forecasts",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.92,
+        "reasoning": "Strong 35% revenue growth that beats all analyst forecasts indicates robust business momentum and market outperformance.",
+        "valid_json": true
+      },
+      {
+        "headline": "Cryptocurrency exchange FTX files for bankruptcy amid liquidity crisis",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.95,
+        "reasoning": "Bankruptcy filing due to liquidity crisis indicates severe financial distress and potential total loss for investors.",
+        "valid_json": true
+      },
+      {
+        "headline": "S&P 500 closes flat as investors digest mixed economic data",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "A flat market close with mixed economic signals indicates neither clear bullish nor bearish momentum.",
+        "valid_json": true
+      },
+      {
+        "headline": "Nvidia announces new AI chip but faces potential export restrictions to China",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The positive news of a new AI chip announcement is offset by concerns about export restrictions that could limit market access.",
+        "valid_json": true
+      },
+      {
+        "headline": "Bank of England raises rates for the 14th consecutive time, says further hikes unlikely",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.75,
+        "reasoning": "The rate hike is bearish for growth but the signal that further hikes are unlikely is bullish, creating offsetting effects.",
+        "valid_json": true
+      },
+      {
+        "headline": "Consumer confidence falls to lowest level since 2021 as inflation concerns persist",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.9,
+        "reasoning": "Declining consumer confidence to multi-year lows combined with persistent inflation concerns signals potential economic weakness and reduced consumer spending.",
+        "valid_json": true
+      },
+      {
+        "headline": "Unemployment claims drop to 52-week low, labour market remains tight",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "Lower unemployment claims and tight labor market conditions indicate economic strength and potential wage growth pressures.",
+        "valid_json": true
+      },
+      {
+        "headline": "Gold surges 4% as global recession fears mount and investors flee to safe havens",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.9,
+        "reasoning": "A 4% surge in gold driven by safe haven demand during recession fears indicates strong bullish momentum for the precious metal.",
+        "valid_json": true
+      },
+      {
+        "headline": "Government announces massive stimulus package amid deepening economic crisis",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The positive stimulus announcement is offset by the negative context of a deepening economic crisis, creating mixed market implications.",
+        "valid_json": true
+      },
+      {
+        "headline": "Tech CEO steps down to pursue personal interests, board names interim replacement",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.7,
+        "reasoning": "CEO departure creates leadership uncertainty and potential disruption despite having an interim replacement ready.",
+        "valid_json": true
+      }
+    ]
+  },
+  {
+    "num_examples": 3,
+    "accuracy": 0.8,
+    "json_rate": 1.0,
+    "correct": 8,
+    "total": 10,
+    "results": [
+      {
+        "headline": "Amazon Web Services revenue surges 35% year-over-year, exceeding all forecasts",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.95,
+        "reasoning": "Strong 35% revenue growth that exceeds forecasts indicates robust business performance and market demand.",
+        "valid_json": true
+      },
+      {
+        "headline": "Cryptocurrency exchange FTX files for bankruptcy amid liquidity crisis",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.95,
+        "reasoning": "Bankruptcy filing due to liquidity crisis signals severe financial distress and potential investor losses.",
+        "valid_json": true
+      },
+      {
+        "headline": "S&P 500 closes flat as investors digest mixed economic data",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "Flat market close with mixed economic signals indicates no clear directional bias for investors.",
+        "valid_json": true
+      },
+      {
+        "headline": "Nvidia announces new AI chip but faces potential export restrictions to China",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The positive impact of a new AI chip announcement is offset by potential export restrictions to a major market, creating mixed signals.",
+        "valid_json": true
+      },
+      {
+        "headline": "Bank of England raises rates for the 14th consecutive time, says further hikes unlikely",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The rate hike is bearish for growth but the signal of no further increases is bullish, creating offsetting effects.",
+        "valid_json": true
+      },
+      {
+        "headline": "Consumer confidence falls to lowest level since 2021 as inflation concerns persist",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "Declining consumer confidence to multi-year lows signals weakening economic sentiment that typically leads to reduced spending and slower growth.",
+        "valid_json": true
+      },
+      {
+        "headline": "Unemployment claims drop to 52-week low, labour market remains tight",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "Declining unemployment claims to annual lows and tight labor market conditions indicate strong economic fundamentals and potential wage growth.",
+        "valid_json": true
+      },
+      {
+        "headline": "Gold surges 4% as global recession fears mount and investors flee to safe havens",
+        "expected": "bullish",
+        "got": "bearish",
+        "correct": false,
+        "confidence": 0.85,
+        "reasoning": "While gold's surge is positive for gold investors, it indicates broader market fear and recession concerns which are negative for general equities.",
+        "valid_json": true
+      },
+      {
+        "headline": "Government announces massive stimulus package amid deepening economic crisis",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The positive stimulus announcement is offset by the concerning economic crisis context, creating mixed market signals.",
+        "valid_json": true
+      },
+      {
+        "headline": "Tech CEO steps down to pursue personal interests, board names interim replacement",
+        "expected": "bearish",
+        "got": "neutral",
+        "correct": false,
+        "confidence": 0.6,
+        "reasoning": "CEO departure creates uncertainty but the stated reason is benign and interim leadership suggests orderly transition.",
+        "valid_json": true
+      }
+    ]
+  },
+  {
+    "num_examples": 5,
+    "accuracy": 1.0,
+    "json_rate": 1.0,
+    "correct": 10,
+    "total": 10,
+    "results": [
+      {
+        "headline": "Amazon Web Services revenue surges 35% year-over-year, exceeding all forecasts",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.95,
+        "reasoning": "Strong 35% revenue growth that exceeded all analyst forecasts indicates exceptional business performance and momentum.",
+        "valid_json": true
+      },
+      {
+        "headline": "Cryptocurrency exchange FTX files for bankruptcy amid liquidity crisis",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.95,
+        "reasoning": "Bankruptcy filing due to liquidity crisis represents severe financial distress and market instability.",
+        "valid_json": true
+      },
+      {
+        "headline": "S&P 500 closes flat as investors digest mixed economic data",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.9,
+        "reasoning": "A flat market close combined with mixed economic signals indicates no clear directional bias.",
+        "valid_json": true
+      },
+      {
+        "headline": "Nvidia announces new AI chip but faces potential export restrictions to China",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "The positive impact of a new AI chip announcement is offset by concerns over potential China export restrictions, creating mixed signals.",
+        "valid_json": true
+      },
+      {
+        "headline": "Bank of England raises rates for the 14th consecutive time, says further hikes unlikely",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.7,
+        "reasoning": "The rate hike is hawkish but guidance suggesting no further increases creates offsetting signals for market direction.",
+        "valid_json": true
+      },
+      {
+        "headline": "Consumer confidence falls to lowest level since 2021 as inflation concerns persist",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.9,
+        "reasoning": "Declining consumer confidence to multi-year lows combined with persistent inflation concerns signals economic weakness and reduced consumer spending.",
+        "valid_json": true
+      },
+      {
+        "headline": "Unemployment claims drop to 52-week low, labour market remains tight",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.85,
+        "reasoning": "Lower unemployment claims and tight labor market indicate strong economic conditions and job security.",
+        "valid_json": true
+      },
+      {
+        "headline": "Gold surges 4% as global recession fears mount and investors flee to safe havens",
+        "expected": "bullish",
+        "got": "bullish",
+        "correct": true,
+        "confidence": 0.9,
+        "reasoning": "Strong gold price surge driven by safe haven demand indicates bullish sentiment for precious metals amid economic uncertainty.",
+        "valid_json": true
+      },
+      {
+        "headline": "Government announces massive stimulus package amid deepening economic crisis",
+        "expected": "neutral",
+        "got": "neutral",
+        "correct": true,
+        "confidence": 0.6,
+        "reasoning": "Stimulus package is typically bullish for markets, but the mention of deepening crisis creates conflicting signals that offset each other.",
+        "valid_json": true
+      },
+      {
+        "headline": "Tech CEO steps down to pursue personal interests, board names interim replacement",
+        "expected": "bearish",
+        "got": "bearish",
+        "correct": true,
+        "confidence": 0.7,
+        "reasoning": "CEO departure creates leadership uncertainty despite having an interim replacement in place.",
+        "valid_json": true
+      }
+    ]
+  }
+]
