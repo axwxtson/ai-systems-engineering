@@ -1,0 +1,5 @@
+anthropic
+voyageai
+chromadb
+rank-bm25
+numpy
