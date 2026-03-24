@@ -1,0 +1,375 @@
+{
+  "stats": {
+    "fixed": {
+      "strategy": "fixed",
+      "total_chunks": 52,
+      "avg_chunk_size": 445,
+      "min_chunk_size": 71,
+      "max_chunk_size": 500,
+      "chunks_per_doc": {
+        "btc_crash_2022.md": 4,
+        "btc_etf_2024.md": 4,
+        "crypto_defi_risks.md": 5,
+        "eth_merge_2022.md": 4,
+        "fed_rates_2023.md": 4,
+        "gold_2023.md": 4,
+        "japan_rates_2024.md": 4,
+        "nvidia_ai_boom.md": 5,
+        "oil_geopolitics_2024.md": 4,
+        "portfolio_construction_ai.md": 5,
+        "sp500_2024_q1.md": 4,
+        "tsx_energy_2024.md": 5
+      }
+    },
+    "recursive": {
+      "strategy": "recursive",
+      "total_chunks": 40,
+      "avg_chunk_size": 584,
+      "min_chunk_size": 389,
+      "max_chunk_size": 797,
+      "chunks_per_doc": {
+        "btc_crash_2022.md": 3,
+        "btc_etf_2024.md": 3,
+        "crypto_defi_risks.md": 4,
+        "eth_merge_2022.md": 3,
+        "fed_rates_2023.md": 3,
+        "gold_2023.md": 3,
+        "japan_rates_2024.md": 3,
+        "nvidia_ai_boom.md": 3,
+        "oil_geopolitics_2024.md": 4,
+        "portfolio_construction_ai.md": 4,
+        "sp500_2024_q1.md": 3,
+        "tsx_energy_2024.md": 4
+      }
+    },
+    "semantic": {
+      "strategy": "semantic",
+      "total_chunks": 111,
+      "avg_chunk_size": 165,
+      "min_chunk_size": 64,
+      "max_chunk_size": 332,
+      "chunks_per_doc": {
+        "btc_crash_2022.md": 9,
+        "btc_etf_2024.md": 9,
+        "crypto_defi_risks.md": 13,
+        "eth_merge_2022.md": 7,
+        "fed_rates_2023.md": 7,
+        "gold_2023.md": 10,
+        "japan_rates_2024.md": 8,
+        "nvidia_ai_boom.md": 11,
+        "oil_geopolitics_2024.md": 8,
+        "portfolio_construction_ai.md": 10,
+        "sp500_2024_q1.md": 9,
+        "tsx_energy_2024.md": 10
+      }
+    }
+  },
+  "results": {
+    "fixed": [
+      {
+        "query": "What caused Bitcoin to crash in 2022?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6470881700515747,
+        "top_source": "btc_crash_2022.md",
+        "expected_sources": [
+          "btc_crash_2022.md"
+        ]
+      },
+      {
+        "query": "How did the Ethereum Merge change the network's energy consumption?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5862729549407959,
+        "top_source": "eth_merge_2022.md",
+        "expected_sources": [
+          "eth_merge_2022.md"
+        ]
+      },
+      {
+        "query": "What are the main risks of investing in DeFi protocols?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5851519107818604,
+        "top_source": "crypto_defi_risks.md",
+        "expected_sources": [
+          "crypto_defi_risks.md"
+        ]
+      },
+      {
+        "query": "NVIDIA H100 GPU market share AI",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5722883939743042,
+        "top_source": "nvidia_ai_boom.md",
+        "expected_sources": [
+          "nvidia_ai_boom.md"
+        ]
+      },
+      {
+        "query": "central bank gold purchases 2023",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6406362652778625,
+        "top_source": "gold_2023.md",
+        "expected_sources": [
+          "gold_2023.md"
+        ]
+      },
+      {
+        "query": "What was the market reaction to the Bank of Japan ending negative rates?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5878862142562866,
+        "top_source": "japan_rates_2024.md",
+        "expected_sources": [
+          "japan_rates_2024.md"
+        ]
+      },
+      {
+        "query": "How did spot Bitcoin ETFs perform after SEC approval?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6268476843833923,
+        "top_source": "btc_etf_2024.md",
+        "expected_sources": [
+          "btc_etf_2024.md"
+        ]
+      },
+      {
+        "query": "oil supply disruption Red Sea shipping",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5271057486534119,
+        "top_source": "oil_geopolitics_2024.md",
+        "expected_sources": [
+          "oil_geopolitics_2024.md"
+        ]
+      },
+      {
+        "query": "How should a conservative investor allocate to AI stocks?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5626993775367737,
+        "top_source": "portfolio_construction_ai.md",
+        "expected_sources": [
+          "portfolio_construction_ai.md"
+        ]
+      },
+      {
+        "query": "Canadian energy sector pipeline capacity and dividends",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.4989206790924072,
+        "top_source": "tsx_energy_2024.md",
+        "expected_sources": [
+          "tsx_energy_2024.md"
+        ]
+      }
+    ],
+    "recursive": [
+      {
+        "query": "What caused Bitcoin to crash in 2022?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6369478106498718,
+        "top_source": "btc_crash_2022.md",
+        "expected_sources": [
+          "btc_crash_2022.md"
+        ]
+      },
+      {
+        "query": "How did the Ethereum Merge change the network's energy consumption?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5786147117614746,
+        "top_source": "eth_merge_2022.md",
+        "expected_sources": [
+          "eth_merge_2022.md"
+        ]
+      },
+      {
+        "query": "What are the main risks of investing in DeFi protocols?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5818156003952026,
+        "top_source": "crypto_defi_risks.md",
+        "expected_sources": [
+          "crypto_defi_risks.md"
+        ]
+      },
+      {
+        "query": "NVIDIA H100 GPU market share AI",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5584189891815186,
+        "top_source": "nvidia_ai_boom.md",
+        "expected_sources": [
+          "nvidia_ai_boom.md"
+        ]
+      },
+      {
+        "query": "central bank gold purchases 2023",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6328240036964417,
+        "top_source": "gold_2023.md",
+        "expected_sources": [
+          "gold_2023.md"
+        ]
+      },
+      {
+        "query": "What was the market reaction to the Bank of Japan ending negative rates?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5762456655502319,
+        "top_source": "japan_rates_2024.md",
+        "expected_sources": [
+          "japan_rates_2024.md"
+        ]
+      },
+      {
+        "query": "How did spot Bitcoin ETFs perform after SEC approval?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6382530331611633,
+        "top_source": "btc_etf_2024.md",
+        "expected_sources": [
+          "btc_etf_2024.md"
+        ]
+      },
+      {
+        "query": "oil supply disruption Red Sea shipping",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5393632650375366,
+        "top_source": "oil_geopolitics_2024.md",
+        "expected_sources": [
+          "oil_geopolitics_2024.md"
+        ]
+      },
+      {
+        "query": "How should a conservative investor allocate to AI stocks?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5737559795379639,
+        "top_source": "portfolio_construction_ai.md",
+        "expected_sources": [
+          "portfolio_construction_ai.md"
+        ]
+      },
+      {
+        "query": "Canadian energy sector pipeline capacity and dividends",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.4897341728210449,
+        "top_source": "tsx_energy_2024.md",
+        "expected_sources": [
+          "tsx_energy_2024.md"
+        ]
+      }
+    ],
+    "semantic": [
+      {
+        "query": "What caused Bitcoin to crash in 2022?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6454432606697083,
+        "top_source": "btc_crash_2022.md",
+        "expected_sources": [
+          "btc_crash_2022.md"
+        ]
+      },
+      {
+        "query": "How did the Ethereum Merge change the network's energy consumption?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6579283475875854,
+        "top_source": "eth_merge_2022.md",
+        "expected_sources": [
+          "eth_merge_2022.md"
+        ]
+      },
+      {
+        "query": "What are the main risks of investing in DeFi protocols?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6141135096549988,
+        "top_source": "crypto_defi_risks.md",
+        "expected_sources": [
+          "crypto_defi_risks.md"
+        ]
+      },
+      {
+        "query": "NVIDIA H100 GPU market share AI",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6999979615211487,
+        "top_source": "nvidia_ai_boom.md",
+        "expected_sources": [
+          "nvidia_ai_boom.md"
+        ]
+      },
+      {
+        "query": "central bank gold purchases 2023",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6877616047859192,
+        "top_source": "gold_2023.md",
+        "expected_sources": [
+          "gold_2023.md"
+        ]
+      },
+      {
+        "query": "What was the market reaction to the Bank of Japan ending negative rates?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.564172625541687,
+        "top_source": "japan_rates_2024.md",
+        "expected_sources": [
+          "japan_rates_2024.md"
+        ]
+      },
+      {
+        "query": "How did spot Bitcoin ETFs perform after SEC approval?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6614434123039246,
+        "top_source": "btc_etf_2024.md",
+        "expected_sources": [
+          "btc_etf_2024.md"
+        ]
+      },
+      {
+        "query": "oil supply disruption Red Sea shipping",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.5283714532852173,
+        "top_source": "oil_geopolitics_2024.md",
+        "expected_sources": [
+          "oil_geopolitics_2024.md"
+        ]
+      },
+      {
+        "query": "How should a conservative investor allocate to AI stocks?",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.6317139267921448,
+        "top_source": "portfolio_construction_ai.md",
+        "expected_sources": [
+          "portfolio_construction_ai.md"
+        ]
+      },
+      {
+        "query": "Canadian energy sector pipeline capacity and dividends",
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "top_similarity": 0.45553696155548096,
+        "top_source": "tsx_energy_2024.md",
+        "expected_sources": [
+          "tsx_energy_2024.md"
+        ]
+      }
+    ]
+  }
+}
