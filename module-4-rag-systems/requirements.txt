@@ -1,4 +1,3 @@
 anthropic
 voyageai
 chromadb
-numpy

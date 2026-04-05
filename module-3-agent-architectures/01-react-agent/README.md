@@ -48,4 +48,4 @@ python3 main.py
 
 ## Connection to AW Analysis
 
-This agent is the prototype for AW Analysis's core analysis engine. In production, the mock data in tools.py gets replaced with real API calls to market data providers, and the system prompt evolves into the production prompt from Module 2 Exercise 2.1.
+This agent is the prototype for AW Analysis's core analysis engine. In production, the mock data in tools.py gets replaced with real API calls to market data providers, and the system prompt evolves into the production prompt from Module 2 Exercise 2.1.git ad

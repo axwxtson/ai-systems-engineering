@@ -63,3 +63,9 @@ All three strategies achieved perfect recall@5 (1.00) and MRR (1.00) across all 
 ## Part of Module 4: RAG Systems
 
 Exercise 4.2 of the [AI Systems Engineering](https://github.com/axwxtson/ai-systems-engineering) study programme.
+
+- Three strategies compared: fixed (500ch), recursive (800ch), semantic (topic-based)
+- All achieved perfect recall@5 on 12-document corpus — dataset too small to differentiate
+- Semantic chunking highest similarity (0.615 avg) but smallest context per chunk (165ch)
+- Key finding: eval difficulty matters more than strategy choice at small corpus scale
+- Recursive remains best default: balances retrieval precision with generation context
