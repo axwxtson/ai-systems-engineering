@@ -1,0 +1,65 @@
+# AW Analysis — Cursor Rules
+# This file is prepended to every Cursor conversation in this repo.
+# Keep it specific to the project. Generic Python rules go elsewhere.
+
+## Project
+You are working on AW Analysis, a cross-asset market intelligence platform
+covering equities, crypto, forex, and commodities. The codebase is a
+self-directed AI Systems Engineering study programme with 8 modules of
+production-quality exercises.
+
+## Stack
+- Python 3.14 (use `PYTHONPATH=$(pwd)` for cross-module imports — this is
+  required, not optional, due to Python 3.14's changed default sys.path)
+- Anthropic SDK (pin anthropic>=0.40) — this is the only LLM provider
+- Claude Haiku 4.5 for cheap/fast tasks, Claude Sonnet 4 for quality tasks
+- ChromaDB for vector storage (prototyping), pgvector (production target)
+- Voyage AI for embeddings (voyageai SDK)
+- Langfuse for observability (langfuse>=3.0.0)
+- colorama for coloured terminal output in exercises
+
+## Style
+- British English in all comments, docstrings, documentation, and READMEs
+  (tokenisation, behaviour, optimise, colour, etc.)
+- Fully typed function signatures using standard library types
+- Prefer dataclasses over dicts for structured data
+- Prefer explicit imports over wildcard imports
+- No type: ignore comments — fix the type instead
+- Keep functions under 40 lines; extract helpers if longer
+- Docstrings on public functions; skip them on obvious private helpers
+
+## Patterns — DO follow
+- The agent loop pattern from module-3 (explicit while loop with tool dispatch)
+  is the reference. Do not reimplement it; extend it.
+- The provider abstraction from module-7 (Protocol + per-provider impl) is the
+  reference for any new abstraction layer. Extend it, don't replace it.
+- The EmissionBackend protocol from module-8 exercise 8.2 is the observability
+  pattern. New backends implement emit() and flush().
+- The two-layer eval pattern from module-6 (deterministic check + LLM-as-judge)
+  is how we grade outputs. Do not skip the deterministic layer.
+- Use pip3 not pip (macOS convention)
+- Use bare `git commit` to open the editor for multi-line commit messages
+
+## Patterns — DO NOT
+- Do not add LangChain, LlamaIndex, or other heavyweight frameworks as
+  dependencies. We stay on the Anthropic SDK and write our own loops.
+- Do not add dependencies without justifying them in the commit message.
+- Do not refactor existing modules unless explicitly asked.
+- Do not add comments that restate what the code does.
+- Do not use `python` — always use `python3`.
+- Do not use `-m` flag for multi-line commit messages (shell metacharacter
+  issues on macOS). Use bare `git commit` instead.
+- Do not create virtual environments unless specifically asked — the exercises
+  use system Python with --break-system-packages.
+
+## File conventions
+- Each exercise lives in its own folder under the module directory
+- Every exercise has a README.md with actual run results (not "expected output")
+- requirements.txt per exercise, not a global one
+- Tests go in the exercise folder alongside the module being tested
+
+## Models (current as of April 2026)
+- Haiku: claude-haiku-4-5-20251001 (cheap judge, easy-class routing)
+- Sonnet: claude-sonnet-4-20250514 (default for quality tasks)
+- Opus: claude-opus-4-20250514 (reserved for genuinely hard tasks)
+- Note: claude-3-haiku and claude-3-5-haiku are RETIRED — do not use them
